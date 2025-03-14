@@ -1,12 +1,21 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Button } from "./components/ui/button";
+import AuthLayout from "./components/auth/Layout";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
 
 function App() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-svh">
-        <Button>Click me</Button>
-      </div>
+      {/* every common components that should be present every pages */}
+      {/* <h1>header components</h1> */}
+      <Routes>
+        <Route path="/auth" element={<AuthLayout />}>
+          {/* here doesn't give /login or /register only give login and register to the path property */}
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Route>
+      </Routes>
     </>
   );
 }
