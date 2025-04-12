@@ -12,6 +12,7 @@ import NotFoundPage from "./pages/notfound";
 import CheckoutPage from "./pages/shopping-view/checkout";
 import HomePage from "./pages/shopping-view/home";
 import ProductListing from "./pages/shopping-view/productsListing";
+import AccountsPage from "./pages/shopping-view/account";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="home" element={<HomePage/>} />
           <Route path="checkout" element={<CheckoutPage/>} />
           <Route path="listing" element={<ProductListing/>} />
+          <Route path="account" element={<AccountsPage/>} />
         </Route>
 
         {/* not found page */}
